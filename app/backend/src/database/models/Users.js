@@ -1,11 +1,5 @@
-export default (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   const Users = sequelize.define('Users', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
