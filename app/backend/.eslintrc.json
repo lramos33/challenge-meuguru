@@ -18,6 +18,8 @@
     "rules": {
         "no-console": "off",
         "import/extensions": "off",
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        "consistent-return": "off",
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
     }
 }
