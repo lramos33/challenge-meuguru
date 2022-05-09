@@ -1,0 +1,14 @@
+import { Request, Response, NextFunction } from 'express';
+import services from '../services';
+
+const remove = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { id } = req.params;
+    await services.remove(id);
+    return res.status(200).end('removed');
+  } catch (error) {
+    next(error);
+  }
+};
+
+export default remove;

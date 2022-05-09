@@ -1,7 +1,11 @@
-import getAll from './getAll.controller';
 import create from './create.controller';
+import getAll from './getAll.controller';
+import edit from './edit.controller';
+import remove from './remove.controller';
 
 export default {
-  getAll,
   create,
+  getAll,
+  edit,
+  remove,
 };
