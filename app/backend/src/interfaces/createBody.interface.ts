@@ -1,7 +1,7 @@
-interface User {
+interface CreateBody {
   name: string;
   email: string;
   password: string;
 }
 
-export default User;
+export default CreateBody;
