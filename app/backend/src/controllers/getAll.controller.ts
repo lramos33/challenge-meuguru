@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import services from '../services';
+import services from '../services/Users';
 
 const getAll = async (_req: Request, res: Response, next: NextFunction) => {
   try {
