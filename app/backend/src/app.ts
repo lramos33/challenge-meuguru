@@ -1,10 +1,11 @@
 import express from 'express';
+import routes from './routes';
+import middlewares from './middlewares';
 
 const app = express();
 app.use(express.json());
 
-app.get('/', (_req, res) => {
-  res.status(200).send('Hello Backend!');
-});
+app.use('/users', routes.users);
+app.use(middlewares.error);
 
 export default app;
