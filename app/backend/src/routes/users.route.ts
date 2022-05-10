@@ -17,6 +17,11 @@ users.get(
   userController.getAll,
 );
 
+users.get(
+  '/:id',
+  userController.getById,
+);
+
 users.put(
   '/:id',
   middlewares.userValidation,
