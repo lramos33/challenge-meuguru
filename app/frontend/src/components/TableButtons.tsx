@@ -3,11 +3,11 @@ import Response from '../interfaces/response';
 
 function TableButtons(props: { responseData: Response[], setPageData: Function}) {
   const { responseData, setPageData } = props;
+  const totalPages = Math.ceil(responseData.length / 10);
 
   const [disablePreviousButton, setDisablePreviousButton] = useState(false);
   const [disableNextButton, setDisableNextButton] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(responseData.length / 10);
 
   useEffect(() => {
     const max = currentPage * 10;
@@ -16,8 +16,13 @@ function TableButtons(props: { responseData: Response[], setPageData: Function})
 
     switch (currentPage) {
       case 1:
-        setDisablePreviousButton(true);
-        setDisableNextButton(false);
+        if (currentPage === totalPages || totalPages === 0) {
+          setDisablePreviousButton(true);
+          setDisableNextButton(true);
+        } else {
+          setDisablePreviousButton(true);
+          setDisableNextButton(false);
+        }
         break;
       case totalPages:
         setDisablePreviousButton(false);
@@ -27,7 +32,7 @@ function TableButtons(props: { responseData: Response[], setPageData: Function})
         setDisablePreviousButton(false);
         setDisableNextButton(false);
     }
-  }, [currentPage]);
+  }, [currentPage, totalPages]);
 
   const previousPage = () => {
     setCurrentPage((prevState) => (prevState - 1));
