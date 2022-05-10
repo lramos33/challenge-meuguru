@@ -1,16 +1,20 @@
 import React from 'react';
-import { BiTrash, BiEditAlt } from 'react-icons/bi';
+import MouseClick from '../interfaces/eventTarget';
 import Response from '../interfaces/response';
+import { deleteUser } from '../services/api';
 
 function UserTable(props: { pageData: Response[] }) {
   const { pageData } = props;
 
-  const editUser = () => {
-    console.log('click edit');
+  const editUser = (event: MouseClick) => {
+    // eslint-disable-next-line no-unused-vars
+    const { id } = event.target.parentElement;
   };
 
-  const removeUser = () => {
-    console.log('click remove');
+  const removeUser = (event: MouseClick) => {
+    const { id } = event.target.parentElement;
+    deleteUser(`/users/${id}`);
+    window.location.reload();
   };
 
   return (
@@ -32,8 +36,12 @@ function UserTable(props: { pageData: Response[] }) {
             <td>{ user.name }</td>
             <td>{ user.email }</td>
             <td>{ user.password }</td>
-            <td><BiEditAlt onClick={editUser} /></td>
-            <td><BiTrash onClick={removeUser} /></td>
+            <td id={user.id.toString()}>
+              <i className="bx bx-edit-alt edit_button" onClick={editUser} />
+            </td>
+            <td id={user.id.toString()}>
+              <i className="bx bx-trash delete_button" onClick={removeUser} />
+            </td>
           </tr>
         ))}
       </tbody>
