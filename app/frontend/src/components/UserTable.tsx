@@ -1,14 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import MouseClick from '../interfaces/eventTarget';
 import Response from '../interfaces/response';
 import { deleteUser } from '../services/api';
 
 function UserTable(props: { pageData: Response[] }) {
   const { pageData } = props;
+  const navigate = useNavigate();
 
   const editUser = (event: MouseClick) => {
-    // eslint-disable-next-line no-unused-vars
     const { id } = event.target.parentElement;
+    navigate(`/users/${id}`);
   };
 
   const removeUser = (event: MouseClick) => {

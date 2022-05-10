@@ -1,5 +1,5 @@
 interface EditBody {
-  id: string;
+  id: string | undefined;
   name: string;
   email: string;
   password: string;
