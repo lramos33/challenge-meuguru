@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import validations from '../services/Validations';
 
-const emailValidation = async (req: Request, res: Response, next: NextFunction) => {
+const registerEmailValidation = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { email } = req.body;
-    const error = await validations.emailValidation(email);
+    const error = await validations.registerEmailValidation(email);
     if (error) {
       return res.status(error.code).json({ error: error.message });
     }
@@ -14,4 +14,4 @@ const emailValidation = async (req: Request, res: Response, next: NextFunction) 
   }
 };
 
-export default emailValidation;
+export default registerEmailValidation;

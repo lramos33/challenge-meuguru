@@ -4,7 +4,7 @@ const { Users } = require('../../database/models');
 
 const EMAIL_REGEX = /(.+)@(.+){2,}\.(.+){2,}/;
 
-const emailValidation = async (email: string): Promise<void | ValidationError> => {
+const registerEmailValidation = async (email: string): Promise<void | ValidationError> => {
   if (email === '') {
     return { code: 400, message: 'Email is required' };
   }
@@ -24,4 +24,4 @@ const emailValidation = async (email: string): Promise<void | ValidationError> =
   }
 };
 
-export default emailValidation;
+export default registerEmailValidation;

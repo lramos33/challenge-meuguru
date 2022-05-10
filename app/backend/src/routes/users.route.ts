@@ -7,7 +7,7 @@ const users = express.Router();
 users.post(
   '/',
   middlewares.nameValidation,
-  middlewares.emailValidation,
+  middlewares.registerEmailValidation,
   middlewares.passwordValidation,
   userController.create,
 );
@@ -26,7 +26,7 @@ users.put(
   '/:id',
   middlewares.userValidation,
   middlewares.nameValidation,
-  middlewares.emailValidation,
+  middlewares.editEmailValidation,
   middlewares.passwordValidation,
   userController.edit,
 );
