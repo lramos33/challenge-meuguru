@@ -1,13 +1,13 @@
 import React from 'react';
 import UserTable from '../components/UserTable';
 
-function Data() {
+function Users() {
   return (
     <>
-      <p>Data Page</p>
+      <p>Users Page</p>
       <UserTable />
     </>
   );
 }
 
-export default Data;
+export default Users;
