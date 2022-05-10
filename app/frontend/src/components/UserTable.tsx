@@ -39,10 +39,10 @@ function UserTable(props: { pageData: Response[] }) {
             <td>{ user.email }</td>
             <td>{ user.password }</td>
             <td id={user.id.toString()}>
-              <i className="bx bx-edit-alt edit_button" onClick={editUser} />
+              <i className="bx bx-edit-alt" onClick={editUser} />
             </td>
             <td id={user.id.toString()}>
-              <i className="bx bx-trash delete_button" onClick={removeUser} />
+              <i className="bx bx-trash" onClick={removeUser} />
             </td>
           </tr>
         ))}

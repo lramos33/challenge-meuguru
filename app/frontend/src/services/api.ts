@@ -15,7 +15,7 @@ export const getUsers = async (endpoint: string) => {
   return data;
 };
 
-export const updateUser = async (endpoint: string, body: EditBody) => {
+export const updateUser = async (endpoint: string, body?: EditBody) => {
   await api.put(endpoint, body);
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import UserForms from '../components/UserForms';
 import { postUser } from '../services/api';
+import UserForms from '../components/UserForms';
 
 function Register() {
   const INITIAL_FORM_STATE = {
@@ -32,8 +32,16 @@ function Register() {
   return (
     <>
       <p>Register Page</p>
-      <UserForms formData={formData} setFormData={setFormData} />
-      <button type="submit" onClick={(event) => submitForm(event)}>Submit</button>
+      <UserForms
+        formData={formData}
+        setFormData={setFormData}
+      />
+      <button
+        type="submit"
+        onClick={(event) => submitForm(event)}
+      >
+        Submit
+      </button>
       { (failedRequest) ? <p>{ failedRequestMessage }</p> : null }
       { (successfulRequest) ? <p>User created</p> : null }
     </>

@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import UserForms from '../components/UserForms';
 import { getUsers, updateUser } from '../services/api';
+import UserForms from '../components/UserForms';
 
 function EditUser() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const INITIAL_FORM_STATE = {
-    id,
-    name: '',
-    email: '',
-    password: '',
-  };
-
   const [failedRequest, setFailedRequest] = useState(false);
   const [failedRequestMessage, setFailedRequestMessage] = useState('');
-  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
+  const [formData, setFormData] = useState();
 
   useEffect(() => {
     getUsers(`/users/${id}`)
@@ -24,6 +17,10 @@ function EditUser() {
         setFormData(response);
       });
   }, []);
+
+  const cancelForm = () => {
+    navigate('/users');
+  };
 
   const submitForm = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -41,9 +38,22 @@ function EditUser() {
   return (
     <>
       <p>{ `Edit User ${id} Page` }</p>
-      <UserForms formData={formData} setFormData={setFormData} />
-      <button type="submit" onClick={() => { navigate('/users'); }}>Cancel</button>
-      <button type="submit" onClick={(event) => submitForm(event)}>Save changes</button>
+      <UserForms
+        formData={formData}
+        setFormData={setFormData}
+      />
+      <button
+        type="submit"
+        onClick={cancelForm}
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        onClick={(event) => submitForm(event)}
+      >
+        Save changes
+      </button>
       { (failedRequest) ? <p>{ failedRequestMessage }</p> : null }
     </>
   );

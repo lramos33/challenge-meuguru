@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { getUsers } from '../services/api';
-
 import UserTable from '../components/UserTable';
 import TableButtons from '../components/TableButtons';
 
@@ -19,8 +18,13 @@ function Users() {
   return (
     <>
       <p>Users Page</p>
-      <UserTable pageData={pageData} />
-      <TableButtons responseData={responseData} setPageData={setPageData} />
+      <UserTable
+        pageData={pageData}
+      />
+      <TableButtons
+        responseData={responseData}
+        setPageData={setPageData}
+      />
     </>
   );
 }

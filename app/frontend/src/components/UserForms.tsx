@@ -16,17 +16,30 @@ function UserForms(props: any) {
     <form>
       <label htmlFor="name">
         <p>Name:</p>
-        <input type="name" name="name" value={formData.name} onChange={handleChange} />
+        <input
+          type="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
       </label>
-
       <label htmlFor="email">
         <p>Email:</p>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
       </label>
-
       <label htmlFor="password">
         <p>Password:</p>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
       </label>
     </form>
   );

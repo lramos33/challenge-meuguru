@@ -44,8 +44,20 @@ function TableButtons(props: { responseData: Response[], setPageData: Function})
 
   return (
     <>
-      <button type="button" onClick={previousPage} disabled={disablePreviousButton}>Previous</button>
-      <button type="button" onClick={nextPage} disabled={disableNextButton}>Next</button>
+      <button
+        type="button"
+        onClick={previousPage}
+        disabled={disablePreviousButton}
+      >
+        Previous
+      </button>
+      <button
+        type="button"
+        onClick={nextPage}
+        disabled={disableNextButton}
+      >
+        Next
+      </button>
       <p>{ `Page ${currentPage} of ${totalPages}` }</p>
     </>
 
