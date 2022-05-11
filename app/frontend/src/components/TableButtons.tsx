@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Response from '../interfaces/response';
 
-function TableButtons(props: { responseData: Response[], setPageData: Function}) {
-  const { responseData, setPageData } = props;
-  const totalPages = Math.ceil(responseData.length / 10);
+function TableButtons(props: { filteredResponseData: Response[], setPageData: Function}) {
+  const { filteredResponseData, setPageData } = props;
+  const totalPages = Math.ceil(filteredResponseData.length / 10);
 
   const [disablePreviousButton, setDisablePreviousButton] = useState(false);
   const [disableNextButton, setDisableNextButton] = useState(false);
@@ -12,7 +12,7 @@ function TableButtons(props: { responseData: Response[], setPageData: Function})
   useEffect(() => {
     const max = currentPage * 10;
     const min = max - 10;
-    setPageData(responseData.slice(min, max));
+    setPageData(filteredResponseData.slice(min, max));
 
     switch (currentPage) {
       case 1:
