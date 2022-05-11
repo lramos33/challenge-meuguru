@@ -148,6 +148,14 @@ button {
   text-align: center;
 }
 
+/*=============== NOT FOUND PAGE ===============*/
+
+.notfound__img {
+  display: block;
+  margin: 8rem auto;
+  width: 500px;
+}
+
 /*=============== FORMS COMPONENT ===============*/
 
 form {
@@ -365,11 +373,4 @@ tr:nth-child(even) {
 .header__page_name:hover {
   color: var(--second-color-dark-background);
   cursor: pointer;
-}
-
-
-.notfound__img {
-  display: block;
-  margin: 8rem auto;
-  width: 500px;
 }
