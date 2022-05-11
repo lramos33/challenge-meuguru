@@ -41,7 +41,7 @@ function SignUp() {
         { (failedRequest) ? <p className="signup__failed">{ failedRequestMessage }</p> : null }
         { (successfulRequest) ? <p className="signup__successful">User created</p> : null }
         <button
-          className="signup__button"
+          className="signup__submit_btn"
           type="submit"
           onClick={(event) => submitForm(event)}
         >
