@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getUsers, updateUser } from '../services/api';
+import Header from '../components/Header';
 import UserForms from '../components/UserForms';
 
 function EditUser() {
@@ -44,6 +45,7 @@ function EditUser() {
 
   return (
     <div className="page_content">
+      <Header />
       <div className="edituser__container">
         <img className="avatar__img" src="../../public/img/avatar.svg" alt="avatar" />
         <p className="edituser__title">Edit User</p>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { postUser } from '../services/api';
+import Header from '../components/Header';
 import UserForms from '../components/UserForms';
 
 function SignUp() {
@@ -31,6 +32,7 @@ function SignUp() {
 
   return (
     <div className="page_content">
+      <Header />
       <div className="signup__container">
         <img className="avatar__img" src="../../public/img/avatar.svg" alt="avatar" />
         <p className="signup__title">Sign up</p>

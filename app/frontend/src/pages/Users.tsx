@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getUsers } from '../services/api';
+import Header from '../components/Header';
 import Filters from '../components/Filters';
 import UserTable from '../components/UserTable';
 import TableButtons from '../components/TableButtons';
@@ -24,6 +25,7 @@ function Users() {
 
   return (
     <div className="page_content">
+      <Header />
       <div className="users__container">
         <p className="users__title">Users</p>
         <p className="users__subtitle">Find by</p>

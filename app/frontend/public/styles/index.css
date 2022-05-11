@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+:root {
+  --main-color: #37004e;
+  --second-color-dark-background: #00f2b1;
+  --second-color-light-background: #00cd98;
+}
+
 /*=============== BASE ===============*/
 
 * {
@@ -20,7 +26,7 @@ button {
 /*=============== REUSABLE ===============*/
 
 .page_content {
-  padding: 2rem 0;
+  padding: 4rem 0 2rem 0;
 }
 
 .avatar__img {
@@ -36,10 +42,8 @@ button {
   column-gap: 7rem;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   justify-content: center;
-  padding: 0 2rem;
-  width: 100vw;
+  padding: 2rem;
 }
 
 .signup__title {
@@ -60,7 +64,7 @@ button {
 }
 
 .signup__submit_btn {
-  background-color: #6C63FF;
+  background-color: var(--main-color);
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -78,10 +82,8 @@ button {
   column-gap: 7rem;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  padding: 0 2rem;
-  width: 100vw;
+  justify-content:center;
+  padding: 2rem;
 }
 
 .edituser__title {
@@ -102,9 +104,9 @@ button {
 
 .edituser__cancel_btn {
   background-color: #fff;
-  border: solid 2px #6C63FF;
+  border: solid 2px var(--main-color);
   border-radius: 25px;
-  color: #6C63FF;
+  color: var(--main-color);
   font-size: 1.2rem;
   height: 50px;
   margin: 1rem 0;
@@ -113,7 +115,7 @@ button {
 }
 
 .edituser__submit_btn {
-  background-color: #6C63FF;
+  background-color: var(--main-color);
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -132,8 +134,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 2rem;
-  width: 100vw;
+  margin: 2rem 0 0;
 }
 
 .users__title {
@@ -257,8 +258,18 @@ tr:nth-child(even) {
   font-size: 1.5rem;
 }
 
+.table__edit_icon:hover {
+  color: var(--second-color-light-background);
+  cursor: pointer;
+}
+
 .table__delete_icon {
   font-size: 1.5rem;
+}
+
+.table__delete_icon:hover {
+  color: var(--second-color-light-background);
+  cursor: pointer;
 }
 
 /*=============== TABLE BUTTONS COMPONENT ===============*/
@@ -275,7 +286,7 @@ tr:nth-child(even) {
 }
 
 .tablebtns__previous {
-  background-color: #6C63FF;
+  background-color: var(--main-color);
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -285,7 +296,7 @@ tr:nth-child(even) {
 }
 
 .tablebtns__previous:disabled {
-  background-color: #cfcdfc;
+  background-color: #bebebe;
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -297,7 +308,7 @@ tr:nth-child(even) {
 }
 
 .tablebtns__next {
-  background-color: #6C63FF;
+  background-color: var(--main-color);
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -308,7 +319,7 @@ tr:nth-child(even) {
 }
 
 .tablebtns__next:disabled {
-  background-color: #cfcdfc;
+  background-color: #bebebe;
   border: none;
   border-radius: 20px;
   color: #fff;
@@ -317,4 +328,41 @@ tr:nth-child(even) {
   outline: none;
   height: 35px;
   width: 100px;
+}
+
+/*=============== HEADER COMPONENT ===============*/
+
+.header {
+  background-color: var(--main-color);
+  box-shadow: 0 5px 10px #e1e5ee;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header__nav {
+  align-items: center;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.header__nav_list {
+  column-gap: 2rem;
+  display: flex;
+  list-style-type: none;
+}
+
+.header__page_name {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.header__page_name:hover {
+  color: var(--second-color-dark-background);
+  cursor: pointer;
 }
