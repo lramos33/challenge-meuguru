@@ -32,7 +32,7 @@ function SignUp() {
   return (
     <div className="page_content">
       <div className="signup__container">
-        <img className="avatar__img" src="./img/avatar.svg" alt="avatar" />
+        <img className="avatar__img" src="../../public/img/avatar.svg" alt="avatar" />
         <p className="signup__title">Sign up</p>
         <UserForms
           formData={formData}
