@@ -7,9 +7,16 @@ function EditUser() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const INITIAL_FORM_STATE = {
+    id,
+    name: '',
+    email: '',
+    password: '',
+  };
+
   const [failedRequest, setFailedRequest] = useState(false);
   const [failedRequestMessage, setFailedRequestMessage] = useState('');
-  const [formData, setFormData] = useState();
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
 
   useEffect(() => {
     getUsers(`/users/${id}`)
