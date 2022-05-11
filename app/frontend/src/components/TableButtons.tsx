@@ -43,23 +43,27 @@ function TableButtons(props: { filteredResponseData: Response[], setPageData: Fu
   };
 
   return (
-    <>
-      <button
-        type="button"
-        onClick={previousPage}
-        disabled={disablePreviousButton}
-      >
-        Previous
-      </button>
-      <button
-        type="button"
-        onClick={nextPage}
-        disabled={disableNextButton}
-      >
-        Next
-      </button>
+    <div className="tablebtns__content">
+      <div className="tablebtns__btns">
+        <button
+          className="tablebtns__previous"
+          type="button"
+          onClick={previousPage}
+          disabled={disablePreviousButton}
+        >
+          Previous
+        </button>
+        <button
+          className="tablebtns__next"
+          type="button"
+          onClick={nextPage}
+          disabled={disableNextButton}
+        >
+          Next
+        </button>
+      </div>
       <p>{ `Page ${currentPage} of ${totalPages}` }</p>
-    </>
+    </div>
 
   );
 }

@@ -23,20 +23,23 @@ function Users() {
   }, [filteredResponseData]);
 
   return (
-    <>
-      <p>Users Page</p>
-      <Filters
-        responseData={responseData}
-        setFilteredResponseData={setFilteredResponseData}
-      />
-      <UserTable
-        pageData={pageData}
-      />
-      <TableButtons
-        filteredResponseData={filteredResponseData}
-        setPageData={setPageData}
-      />
-    </>
+    <div className="page_content">
+      <div className="users__container">
+        <p className="users__title">Users</p>
+        <p className="users__subtitle">Find by</p>
+        <Filters
+          responseData={responseData}
+          setFilteredResponseData={setFilteredResponseData}
+        />
+        <UserTable
+          pageData={pageData}
+        />
+        <TableButtons
+          filteredResponseData={filteredResponseData}
+          setPageData={setPageData}
+        />
+      </div>
+    </div>
   );
 }
 

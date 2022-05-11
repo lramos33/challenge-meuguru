@@ -16,27 +16,38 @@ function Filters(props: { responseData: Response[], setFilteredResponseData: Fun
   }, [email]);
 
   return (
-    <>
-      <p>Filter component</p>
-      <label htmlFor="email">
-        <p>Name:</p>
-        <input
-          type="text"
-          name="name"
-          autoComplete="off"
-          onChange={({ target: { value } }: any) => setName(value)}
-        />
-      </label>
-      <label htmlFor="email">
-        <p>Email:</p>
-        <input
-          type="text"
-          name="Email"
-          autoComplete="off"
-          onChange={({ target: { value } }: any) => setEmail(value)}
-        />
-      </label>
-    </>
+    <div className="filters__content">
+      <div className="filters__input_div">
+        <label htmlFor="email">
+          <div className="filters__input_title">
+            <i className="bx bxs-user filters__icon" />
+            <p>Name:</p>
+          </div>
+          <input
+            className="filters__input"
+            type="text"
+            name="name"
+            autoComplete="off"
+            onChange={({ target: { value } }: any) => setName(value)}
+          />
+        </label>
+      </div>
+      <div className="filters__input_div">
+        <label htmlFor="email">
+          <div className="filters__input_title">
+            <i className="bx bxs-envelope filters__icon" />
+            <p>Email:</p>
+          </div>
+          <input
+            className="filters__input"
+            type="text"
+            name="Email"
+            autoComplete="off"
+            onChange={({ target: { value } }: any) => setEmail(value)}
+          />
+        </label>
+      </div>
+    </div>
   );
 }
 
