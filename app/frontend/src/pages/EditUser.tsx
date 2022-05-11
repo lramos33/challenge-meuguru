@@ -43,26 +43,33 @@ function EditUser() {
   };
 
   return (
-    <>
-      <p>{ `Edit User ${id} Page` }</p>
-      <UserForms
-        formData={formData}
-        setFormData={setFormData}
-      />
-      <button
-        type="submit"
-        onClick={cancelForm}
-      >
-        Cancel
-      </button>
-      <button
-        type="submit"
-        onClick={(event) => submitForm(event)}
-      >
-        Save changes
-      </button>
-      { (failedRequest) ? <p>{ failedRequestMessage }</p> : null }
-    </>
+    <div className="page_content">
+      <div className="edituser__container">
+        <img className="avatar__img" src="../../public/img/avatar.svg" alt="avatar" />
+        <p className="edituser__title">Edit User</p>
+        <UserForms
+          formData={formData}
+          setFormData={setFormData}
+        />
+        { (failedRequest) ? <p className="edituser__failed">{ failedRequestMessage }</p> : null }
+        <div className="edituser__btn_div">
+          <button
+            className="edituser__cancel_btn"
+            type="submit"
+            onClick={cancelForm}
+          >
+            Cancel
+          </button>
+          <button
+            className="edituser__submit_btn"
+            type="submit"
+            onClick={(event) => submitForm(event)}
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
