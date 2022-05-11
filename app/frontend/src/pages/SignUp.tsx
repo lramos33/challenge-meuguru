@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { postUser } from '../services/api';
 import UserForms from '../components/UserForms';
 
-function Register() {
+function SignUp() {
   const INITIAL_FORM_STATE = {
     name: '',
     email: '',
@@ -30,22 +30,26 @@ function Register() {
   };
 
   return (
-    <>
-      <p>Register Page</p>
-      <UserForms
-        formData={formData}
-        setFormData={setFormData}
-      />
-      <button
-        type="submit"
-        onClick={(event) => submitForm(event)}
-      >
-        Submit
-      </button>
-      { (failedRequest) ? <p>{ failedRequestMessage }</p> : null }
-      { (successfulRequest) ? <p>User created</p> : null }
-    </>
+    <div className="page_content">
+      <div className="signup__container">
+        <img className="avatar__img" src="./img/avatar.svg" alt="avatar" />
+        <p className="signup__title">Sign up</p>
+        <UserForms
+          formData={formData}
+          setFormData={setFormData}
+        />
+        { (failedRequest) ? <p className="signup__failed">{ failedRequestMessage }</p> : null }
+        { (successfulRequest) ? <p className="signup__successful">User created</p> : null }
+        <button
+          className="signup__button"
+          type="submit"
+          onClick={(event) => submitForm(event)}
+        >
+          Submit
+        </button>
+      </div>
+    </div>
   );
 }
 
-export default Register;
+export default SignUp;
