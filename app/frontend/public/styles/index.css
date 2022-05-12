@@ -43,7 +43,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding: 6rem 0 2rem 0;
 }
 
 .signup__title {
@@ -83,7 +83,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content:center;
-  padding: 2rem;
+  padding: 6rem 0 2rem 0;
 }
 
 .edituser__title {
@@ -239,7 +239,7 @@ table {
   margin-bottom: 2rem;
   overflow: hidden;
   text-align: center;
-  width: 80vw;
+  width: 1400px;
 }
 
 thead {
@@ -285,7 +285,7 @@ tr:nth-child(even) {
 .tablebtns__content {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 1400px;
 }
 
 .tablebtns__btns {
