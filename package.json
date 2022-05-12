@@ -1,0 +1,30 @@
+{
+  "name": "challenge-meuguru",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">MeuGuru Fullstack Project</h1>",
+  "main": "index.js",
+  "scripts": {
+    "install:back": "cd app/backend && npm install",
+    "install:front": "cd app/frontend && npm install",
+    "install:all": "concurrently \"npm run install:front\" \"npm run install:back\"",
+    "db:start": "cd app/backend && npm run db:start",
+    "db:reset": "cd app/backend && npm run db:reset",
+    "start:back": "cd app/backend && npm start",
+    "start:front": "cd app/frontend && npm run dev",
+    "start": "concurrently \"npm run db:start\" \"npm run start:back\" \"npm run start:front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lramos33/challenge-meuguru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lramos33/challenge-meuguru/issues"
+  },
+  "homepage": "https://github.com/lramos33/challenge-meuguru#readme",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
