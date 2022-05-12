@@ -16,34 +16,39 @@ Clone o repositório:
 git clone git@github.com:lramos33/challenge-meuguru.git
 ```
 
-Acesse a pasta do backend:
+Dentro da pasta `app/backend` renomeie o arquivo `.env.example` para `.env` e adicione as credenciais do seu banco de dados local:
 
 ```
-cd challenge-meuguru/app/backend
+DB_USERNAME=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
 ```
 
-Execute o servidor:
+Na pasta raiz `app/` instale as dependências: 
+
+```
+npm install
+```
+
+Ainda na pasta raiz `app/`, instale as dependências do frontend e backend: 
+
+```
+npm run install:all
+```
+
+Execute a aplicação: 
 
 ```
 npm start
 ```
 
-Sem encerrar o processo anterior, acesse a pasta do frontend:
+Acesse o endereço `http://localhost:3000/`
 
-```
-cd challenge-meuguru/app/frontend
-```
-
-Execute a aplicação:
-
-```
-npm run dev
-```
 
 ## 🔧 Desenvolvimento
 
-
-![image]()
+![image](./assets/demo.gif)
 
 ##
 
