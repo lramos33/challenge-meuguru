@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Navigate,
+} from 'react-router-dom';
+
 import SignUp from './pages/SignUp';
 import Users from './pages/Users';
 import NotFound from './pages/NotFound';
@@ -21,6 +27,10 @@ function App() {
         <Route
           path="/users/:id"
           element={<EditUser />}
+        />
+        <Route
+          path="/"
+          element={<Navigate to="signup" />}
         />
         <Route
           path="*"
