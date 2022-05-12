@@ -8,7 +8,7 @@ module.exports = {
     database: 'meuguru_challenge',
     host: process.env.DB_HOST,
     dialect: 'postgres',
-    port: Number(process.env.DB_PORT) || 5432,
+    port: Number(process.env.DB_PORT),
     logging: false,
   },
   test: {
