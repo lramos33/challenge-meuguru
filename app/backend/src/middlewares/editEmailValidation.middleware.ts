@@ -5,7 +5,6 @@ const editEmailValidation = async (req: Request, res: Response, next: NextFuncti
   try {
     const { id } = req.params;
     const { email } = req.body;
-    console.log(id);
     const error = await validations.editEmailValidation(email, id);
     if (error) {
       return res.status(error.code).json({ error: error.message });

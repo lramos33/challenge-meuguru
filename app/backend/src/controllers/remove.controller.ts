@@ -5,7 +5,7 @@ const remove = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { id } = req.params;
     await services.remove(id);
-    return res.status(200).end('removed');
+    return res.status(200).send('removed');
   } catch (error) {
     next(error);
   }

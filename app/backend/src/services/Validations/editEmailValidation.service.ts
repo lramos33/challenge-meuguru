@@ -23,7 +23,6 @@ const editEmailValidation = async (email: string, id: string): Promise<void | Va
       [Op.and]: [{ email }, { id: { [Op.ne]: id } }],
     },
   });
-  console.log(registeredUser);
 
   if (registeredUser) {
     return { code: 409, message: 'Email already registered' };

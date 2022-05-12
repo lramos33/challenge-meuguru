@@ -7,7 +7,7 @@ const getById = async (req: Request, res: Response, next: NextFunction) => {
     const result = await services.getById(id);
 
     if (!result) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ error: 'User not found' });
     }
 
     return res.status(200).json(result);

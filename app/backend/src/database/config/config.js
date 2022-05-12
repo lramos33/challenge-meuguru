@@ -9,6 +9,7 @@ module.exports = {
     host: process.env.DB_HOST,
     dialect: 'postgres',
     port: Number(process.env.DB_PORT) || 5432,
+    logging: false,
   },
   test: {
     username: process.env.DB_USERNAME,
@@ -16,6 +17,7 @@ module.exports = {
     database: 'meuguru_challenge',
     host: process.env.DB_HOST,
     dialect: 'postgres',
+    logging: false,
   },
   production: {
     username: process.env.DB_USERNAME,
@@ -23,5 +25,6 @@ module.exports = {
     database: 'meuguru_challenge',
     host: process.env.DB_HOST,
     dialect: 'postgres',
+    logging: false,
   },
 };
