@@ -60,6 +60,9 @@ Acesse o endereço `http://localhost:3000/`
 - [Vite](https://vitejs.dev/)
 - [ESLint](https://eslint.org/)
 - [Nodemon](https://nodemon.io/)
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
+- [Sinon](https://sinonjs.org/)
 
 ### Demo:
 
