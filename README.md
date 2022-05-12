@@ -1,6 +1,6 @@
 <h1 align="center">MeuGuru Fullstack Project</h1>
 
-<<p align="center">✔️ Concluído</p>
+<p align="center">✔️ Concluído</p>
 
 <div align="center">
   <img src="https://shields.io/github/repo-size/lramos33/challenge-meuguru">
@@ -47,6 +47,21 @@ Acesse o endereço `http://localhost:3000/`
 
 
 ## 🔧 Desenvolvimento
+
+### Ferramentas utilizadas:
+
+- [Express](https://expressjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React.js](https://reactjs.org/)
+- [React Router](https://v5.reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Sequelize](https://sequelize.org/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
+- [Nodemon](https://nodemon.io/)
+
+### Demo:
 
 ![image](./assets/demo.gif)
 
